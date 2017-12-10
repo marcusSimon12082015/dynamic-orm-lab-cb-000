@@ -3,6 +3,7 @@ require 'active_support/inflector'
 require 'pry'
 
 class InteractiveRecord
+
   def self.table_name
     self.to_s.downcase.pluralize
   end
@@ -17,7 +18,9 @@ class InteractiveRecord
     end
     column_names.compact
   end
+
   def table_name_for_insert
     self.class.table_name
   end
+
 end
